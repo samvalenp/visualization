@@ -33,8 +33,8 @@
   <select name="cars" id="state" onchange="changeFunc();">
     <option value="index">California</option>
     <option value="indexfl" href="arrest.html">Florida</option>
-    <option value="indextx" href="arrest.html">Texas</option>
-    <option value="indexil" href="arrest.html">Illinois</option>
+    <option value="indextx" href="arrest.html" selected>Texas</option>
+    <option value="indexil" href="arrest.html">New York</option>
     <option value="indexge" href="arrest.html">Georgia</option>
   </select>
 </div>
@@ -62,8 +62,8 @@ console.log("asdlkfaslkdjf")
 
 
 
-var caCases = [11,3,86];
-var caPop = [37,5,58]
+var caCases = [25,12,63];
+var caPop = [41,12,47]
 var color = ['pink','lightgreen','lightgrey'];
 var pie = d3.pie().sort(null);
 var arc = d3.arc().innerRadius(0).outerRadius(100);

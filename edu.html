@@ -5,15 +5,16 @@
 <body onload='init()'>
 
 <div class="topnav">
-  <a class="active" href="index.html">1</a>
+  <a href="index.html">1</a>
   <a href="arrest.html">2</a>
-  <a href="edu.html">3</a>
+  <a class="active" href="edu.html">3</a>
 </div>
 
 <div style="padding-left:16px">
   <h2>Top Navigation Example</h2>
   <p>Some content..</p>
 </div>
+
 
 
 <div style="padding-left:16px">
@@ -26,29 +27,7 @@
 <svg id="legend" width=300 height=300>
 </svg>
 </div>
-
-
-<div style="padding-left:16px">
-	<label for="cars">Choose a state:</label>
-  <select name="cars" id="state" onchange="changeFunc();">
-    <option value="index">California</option>
-    <option value="indexfl" href="arrest.html">Florida</option>
-    <option value="indextx" href="arrest.html">Texas</option>
-    <option value="indexil" href="arrest.html">Illinois</option>
-    <option value="indexge" href="arrest.html">Georgia</option>
-  </select>
-</div>
-
 <script>
-
-
-
-function changeFunc() {
-    var selectBox = document.getElementById("state");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    window.location.href = selectedValue + ".html"
-   }
-
 
 async function init() {
 
@@ -59,13 +38,15 @@ console.log("asdlkfaslkdjf")
 //var covid = await d3.csv("covid2.csv");
 //var cal = covid.filter(function(d){ return d.Location == "California"})
 
+58541
+w: 26489
+b: 4965
 
 
-
-var caCases = [11,3,86];
-var caPop = [37,5,58]
+var caCases = [26489,4965,27087];
+var caPop = [60,12,28]
 var color = ['pink','lightgreen','lightgrey'];
-var pie = d3.pie().sort(null);
+var pie = d3.pie();
 var arc = d3.arc().innerRadius(0).outerRadius(100);
 
 
