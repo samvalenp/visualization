@@ -1,1 +1,83 @@
-hola
+<html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
+<style> circle {fill: lightblue; stroke: black;} </style>
+<link href="style.css" rel="stylesheet">
+<body onload='init()'>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2>Top Navigation Example</h2>
+  <p>Some content..</p>
+</div>
+
+
+
+<svg width=300 height=300>
+</svg>
+<script>
+
+async function init() {
+
+// your code
+var races = ['pink','lightgreen','lightblue'];
+
+var state = "California"
+var caCases = [11,3,86];
+var caPop = [37,5,58]
+
+console.log("asdlkfaslkdjf")
+//var covid = await d3.csv("covid2.csv");
+//var cal = covid.filter(function(d){ return d.Location == "California"})
+
+
+
+
+
+var data = [4,8,15,16,23,42];
+var color = ['pink','lightyellow','lightgreen','lightcyan','lightblue','violet'];
+var pie = d3.pie();
+var arc = d3.arc().innerRadius(0).outerRadius(100);
+
+d3.select("svg")
+	.append("g")
+	.append("rect")
+	.attr('x',0)
+    .attr('y',0)
+    .attr('width',300)
+    .attr('height',300)
+    .attr('fill','white')
+    .attr('stroke','black')
+
+d3.select("svg")
+	.append("g")
+	.attr("transform", "translate("+150+","+150+")")
+	.selectAll("path").data(pie(data)).enter()
+	.append("path")
+		.attr("d", arc)
+		.attr("fill", function(d, i){ return color[i]; });
+
+
+
+d3.select("svg")
+	.append("g")
+		.attr("transform", "translate("+120+","+50+")")
+		.append("text")
+			.text("Value vs Date Graph")
+	
+
+
+
+
+
+/// end of your code
+
+}
+</script>
+</body>
+</html>
