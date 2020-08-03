@@ -11,8 +11,15 @@
 </div>
 
 <div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  <p>Some content..</p>
+
+<h3>Education</h2>
+	<p style="width: 80%;">
+		In this next graph there is a comparison between ethnicity ratio among Ivy League students. These universities have a considerable amount of international students so we can generally expect a small decrease on the ratios for white and black ethnicities and an increase on others. 
+	</p>
+	<p style="width: 80%; margin-top: 25px;">
+		Generally both ethnicities have a reduction on their ratios. Taking into account the difference on the population, the reduction of the ratio on white and black ethnicities are very similar. This might seem to contradict the idea that the black community has less opportunities in education, but that is not entirely true. It's not contradicting, but instead showing that the Ivy League colleges are doing a pretty good job at having diversity among the students. It might not be the case in other levels of education and other groups of colleges.
+	</p>
+
 </div>
 
 
@@ -27,6 +34,16 @@
 <svg id="legend" width=300 height=300>
 </svg>
 </div>
+
+<div style="padding-left:16px">
+
+<h3>Conclusion</h2>
+	<p style="width: 80%;">
+		Now we have a clear view of the impacts on some of the most important aspects that create a negative inequality on minorities like the black community. We have seen that in arrests by the police there is a big increase compared to the white ethnicity, and the ratio is slightly bigger in other areas like Covid-19 and students in the Ivy League. Although these results show a negative impact on the black community, they might not as negative as some people might think. I hope this narrative visualization has shed some clarity on the negative impact in the black community.
+	</p>
+
+</div>
+
 <script>
 
 async function init() {
@@ -38,15 +55,12 @@ console.log("asdlkfaslkdjf")
 //var covid = await d3.csv("covid2.csv");
 //var cal = covid.filter(function(d){ return d.Location == "California"})
 
-58541
-w: 26489
-b: 4965
 
 
 var caCases = [26489,4965,27087];
 var caPop = [60,12,28]
 var color = ['pink','lightgreen','lightgrey'];
-var pie = d3.pie();
+var pie = d3.pie().sort(null);
 var arc = d3.arc().innerRadius(0).outerRadius(100);
 
 
